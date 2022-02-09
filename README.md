@@ -11,7 +11,7 @@ ical2google <ics-file-name>
 Inside `requirements.txt`.
 
 ## Caveats
-- Currently only supports some of the event info (with links to the iCalendar RFC):
+- Currently only supports some of the event info (links are to the iCalendar RFC):
   - summary via [`SUMMARY`](https://datatracker.ietf.org/doc/html/rfc2445#section-4.8.1.12)
   - description via [`DESCRIPTION`](https://datatracker.ietf.org/doc/html/rfc2445#section-4.8.1.5)
   - location via [`LOCATION`](https://datatracker.ietf.org/doc/html/rfc2445#section-4.8.1.7)
