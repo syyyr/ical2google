@@ -25,14 +25,11 @@ calendar = ical.Calendar.from_ical(data)
 
 url = 'https://calendar.google.com/calendar/u/0/r/eventedit?'
 
-event = None
-
 for e in calendar.walk():
     if isinstance(e, ical.Event):
         event = e
         break
-
-if event is None:
+else:
     print("The ics file contained no events")
     exit(1)
 
