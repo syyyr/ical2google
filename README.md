@@ -8,7 +8,7 @@ ical2google <ics-file-name>
 ```
 
 ## Dependencies
-Inside `requirements.txt`.
+Inside `requirements.txt`. But basically, it's just the `icalendar` Python module.
 
 ## Caveats
 - Currently only supports some of the event info (links are to the iCalendar RFC):
