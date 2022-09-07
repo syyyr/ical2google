@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=ical2google
+Exec=/bin/bash /path/to/ical2google_browser_helper.bash
+Type=Application
