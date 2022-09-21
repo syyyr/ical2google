@@ -30,7 +30,7 @@ for e in calendar.walk():
         event = e
         break
 else:
-    print("The ics file contained no events")
+    print('The ics file contained no events')
     exit(1)
 
 query = f'text={encode_string(event.get("SUMMARY"))}'
@@ -42,8 +42,8 @@ if event.has_key('DESCRIPTION'):
     query = f'{query}&details={encode_string(event.get("DESCRIPTION"))}'
 
 if event.has_key('DTSTART'):
-    start = event.get("DTSTART")
-    end = event.get("DTEND")
+    start = event.get('DTSTART')
+    end = event.get('DTEND')
     query = f'${query}&dates={encode_string(start.to_ical())}/{encode_string(end.to_ical())}'
 
 url = f'{url}{query}'
