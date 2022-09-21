@@ -36,17 +36,17 @@ else:
 query = f'text={encode_string(event.get("SUMMARY"))}'
 
 if event.has_key('LOCATION'):
-    query = query + f'&location={encode_string(event.get("LOCATION"))}'
+    query = f'{query}&location={encode_string(event.get("LOCATION"))}'
 
 if event.has_key('DESCRIPTION'):
-    query = query + f'&details={encode_string(event.get("DESCRIPTION"))}'
+    query = f'{query}&details={encode_string(event.get("DESCRIPTION"))}'
 
 if event.has_key('DTSTART'):
     start = event.get("DTSTART")
     end = event.get("DTEND")
-    query = query + f'&dates={encode_string(start.to_ical())}/{encode_string(end.to_ical())}'
+    query = f'${query}&dates={encode_string(start.to_ical())}/{encode_string(end.to_ical())}'
 
-url = url + query
+url = f'{url}{query}'
 print(url)
 
 
