@@ -50,5 +50,3 @@ if event.has_key('DTSTART'):
 
 url = f'{url}{query}'
 print(url)
-
-
