@@ -43,7 +43,9 @@ if event.has_key('DESCRIPTION'):
 
 if event.has_key('DTSTART'):
     start = event.get('DTSTART')
+    assert start is not None
     end = event.get('DTEND')
+    assert end is not None
     query = f'${query}&dates={encode_string(start.to_ical())}/{encode_string(end.to_ical())}'
 
 url = f'{url}{query}'
