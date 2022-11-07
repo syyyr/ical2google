@@ -50,7 +50,7 @@ if 'DTSTART' in event:
     assert start is not None
     end = event.get('DTEND')
     assert end is not None
-    query = f'${query}&dates={encode_string(start.to_ical())}/{encode_string(end.to_ical())}'
+    query = f'{query}&dates={encode_string(start.to_ical())}/{encode_string(end.to_ical())}'
 
 url = f'{url}{query}'
 print(url)
