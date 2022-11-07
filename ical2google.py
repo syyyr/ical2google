@@ -6,6 +6,7 @@ import urllib.parse
 import sys
 import pprint
 
+
 def encode_string(url_str):
     """ Encodes a string into a url with plus signs as spaces. """
     return urllib.parse.quote_plus(url_str)
