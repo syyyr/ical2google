@@ -39,13 +39,13 @@ else:
 
 query = f'text={encode_string(event.get("SUMMARY"))}'
 
-if event.has_key('LOCATION'):
+if 'LOCATION' in event:
     query = f'{query}&location={encode_string(event.get("LOCATION"))}'
 
-if event.has_key('DESCRIPTION'):
+if 'DESCRIPTION' in event:
     query = f'{query}&details={encode_string(event.get("DESCRIPTION"))}'
 
-if event.has_key('DTSTART'):
+if 'DTSTART' in event:
     start = event.get('DTSTART')
     assert start is not None
     end = event.get('DTEND')
