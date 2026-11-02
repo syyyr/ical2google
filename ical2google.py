@@ -1,9 +1,10 @@
 """
 ical2google.py - Open .ics files in Google Calendar
 """
-import icalendar as ical
-import urllib.parse
 import sys
+import urllib.parse
+
+import icalendar as ical
 
 
 def encode_string(url_str):
