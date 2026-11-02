@@ -22,7 +22,7 @@ try:
     text_file = open(file_name, "r")
 except FileNotFoundError:
     print(f"File '{file_name}' doesn't exist")
-    exit(1)
+    sys.exit(1)
 
 
 data = text_file.read()
@@ -36,7 +36,7 @@ for e in calendar.walk():
         break
 else:
     print('The ics file contained no events')
-    exit(1)
+    sys.exit(1)
 
 query = f'text={encode_string(event.get("SUMMARY"))}'
 
