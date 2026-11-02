@@ -19,13 +19,12 @@ if len(sys.argv) < 2:
 file_name = sys.argv[1]
 
 try:
-    text_file = open(file_name, "r")
+    with open(file_name, "r") as text_file:
+        data = text_file.read()
 except FileNotFoundError:
     print(f"File '{file_name}' doesn't exist")
     sys.exit(1)
 
-
-data = text_file.read()
 calendar = ical.Calendar.from_ical(data)
 
 url = 'https://calendar.google.com/calendar/u/0/r/eventedit?'
